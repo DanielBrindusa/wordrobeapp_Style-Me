@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wardrobe App Project Structure</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="hero">
+      <div class="hero-badge">Android Studio Project Map</div>
+      <h1>Wardrobe App Structure Guide</h1>
+      <p class="hero-text">
+        A clean visual map for your <strong>Style me / Wardrobe App</strong> project.
+        Upload these files to GitHub and use this page as a reference while splitting,
+        editing, and maintaining your Android project.
+      </p>
+
+      <div class="hero-actions">
+        <button id="expandAllBtn" class="primary-btn">Expand all</button>
+        <button id="collapseAllBtn" class="secondary-btn">Collapse all</button>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="card">
+        <div class="section-head">
+          <h2>Recommended package structure</h2>
+          <p>Use this as the folder structure to keep the app maintainable.</p>
+        </div>
+
+        <div class="tree" id="projectTree"></div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <div class="section-head">
+            <h2>What goes where</h2>
+          </div>
+          <div class="legend-list">
+            <div class="legend-item">
+              <span class="legend-dot activity"></span>
+              <div>
+                <h3>MainActivity.kt</h3>
+                <p>App startup only. Keep this file small.</p>
+              </div>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot app"></span>
+              <div>
+                <h3>WardrobeApp.kt</h3>
+                <p>App-level navigation and screen wiring.</p>
+              </div>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot nav"></span>
+              <div>
+                <h3>navigation</h3>
+                <p>Routes and route helpers.</p>
+              </div>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot screen"></span>
+              <div>
+                <h3>ui/screens</h3>
+                <p>One screen per file.</p>
+              </div>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot component"></span>
+              <div>
+                <h3>ui/components</h3>
+                <p>Reusable UI pieces shared across screens.</p>
+              </div>
+            </div>
+            <div class="legend-item">
+              <span class="legend-dot utils"></span>
+              <div>
+                <h3>ui/utils</h3>
+                <p>Constants, helpers, and preference helpers.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="section-head">
+            <h2>Maintenance rules</h2>
+          </div>
+          <ul class="rules">
+            <li>Keep one screen per file whenever possible.</li>
+            <li>Move reusable UI into <code>ui/components</code>.</li>
+            <li>Put constants and utility functions in <code>ui/utils</code>.</li>
+            <li>Do not let <code>MainActivity.kt</code> grow again.</li>
+            <li>Build after each split when refactoring.</li>
+            <li>Remove <code>private</code> from top-level items that must be used in other files.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="card">
+        <div class="section-head">
+          <h2>Suggested splitting order</h2>
+          <p>Safer order for future refactors.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <div>
+              <h3>Navigation + utils first</h3>
+              <p>Split routes, constants, and welcome preferences.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <div>
+              <h3>Common components</h3>
+              <p>Move shared UI widgets before moving screens.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <div>
+              <h3>Dialogs and pickers</h3>
+              <p>Keep modal UI together for easier maintenance.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">4</span>
+            <div>
+              <h3>Cards</h3>
+              <p>Move repeated card layouts into the components folder.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">5</span>
+            <div>
+              <h3>Screens one by one</h3>
+              <p>Move each screen separately and test after each move.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card footer-card">
+        <h2>Current target structure</h2>
+        <pre class="structure-preview">com.example.wardrobeapp
+│
+├── MainActivity.kt
+├── WardrobeApp.kt
+│
+├── navigation
+│   └── AppRoute.kt
+│
+├── ui
+│   ├── components
+│   │   ├── Cards.kt
+│   │   ├── ColorPickers.kt
+│   │   ├── CommonComponents.kt
+│   │   └── Dialogs.kt
+│   │
+│   ├── screens
+│   │   ├── AddItemScreen.kt
+│   │   ├── CreateOutfitScreen.kt
+│   │   ├── ItemDetailsScreen.kt
+│   │   ├── SettingsScreen.kt
+│   │   ├── StatsScreen.kt - 'Insights' tab
+│   │   ├── ToWearScreen.kt - 'Outfits' tab
+│   │   ├── WardrobeScreen.kt
+│   │   └── WelcomeScreen.kt
+│   │
+│   └── utils
+│       ├── AppConstants.kt
+│       └── WelcomePreferences.kt</pre>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

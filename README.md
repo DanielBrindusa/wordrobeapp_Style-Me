@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.png" alt="Style Me Logo" width="120" />
+</p>
+
 # 🗂️ WardrobeApp — Project Structure Reference
 
 A static reference site built to visually map and document the package structure of the **Style Me** Android Studio project (`WardrobeApp`). Designed to serve as a living guide while splitting, refactoring, and maintaining the Kotlin/Compose codebase.

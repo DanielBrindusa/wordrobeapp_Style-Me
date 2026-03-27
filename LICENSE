@@ -34,67 +34,82 @@ No ownership rights, licenses, or interests of any kind are transferred to any p
 
 ---
 
-## 3. RESTRICTIONS
+## 3. END-USER PERMITTED USE
+
+Notwithstanding Section 2, end users are granted a limited, non-exclusive, non-transferable, revocable license to **use the Style Me application solely in its compiled, binary form**, subject to all of the following conditions:
+
+- The application was obtained exclusively through the **official Google Play Store** listing published by **Daniel-Cristian Brindusa**.
+- The user complies with Google Play's Terms of Service and any in-app terms presented within the application.
+- The user does not attempt to extract, decompile, reverse engineer, or otherwise access the underlying source code, assets, or data of the application.
+- The user does not redistribute, resell, or transfer the application or their right to use it to any third party.
+
+**This end-user permission applies strictly to the compiled application as distributed on the Play Store. It does not extend to the source code, project structure, documentation, reference site, or any other asset covered by this license.**
+
+Any version of the application obtained through any channel other than the official Play Store listing — including but not limited to APK sharing sites, third-party app stores, or direct file transfer — is unauthorized and not covered by this section.
+
+---
+
+## 4. RESTRICTIONS
 
 The following acts are explicitly and strictly prohibited:
 
-### 3.1 Code and Content
+### 4.1 Code and Content
 - Copying any source code, in whole or in part, regardless of the programming language, file format, or medium.
 - Reproducing any written content, documentation, comments, or instructional material contained within or associated with the Projects.
 
-### 3.2 Structure and Architecture
+### 4.2 Structure and Architecture
 - Replicating the package structure, folder hierarchy, file naming conventions, or architectural layout of either Project.
 - Using the described architectural patterns as a direct blueprint for another software project while retaining substantial similarity to the Projects' structure.
 
-### 3.3 Design and Visual Expression
+### 4.3 Design and Visual Expression
 - Reproducing the visual design, color scheme, layout, UI component arrangement, or stylistic choices of the reference site or the Style Me application.
 - Using the Projects' CSS, HTML structure, or JavaScript logic as a template, even in modified form.
 
-### 3.4 Commercial and Non-Commercial Use
+### 4.4 Commercial and Non-Commercial Use
 All forms of use — whether commercial, non-commercial, personal, educational, or otherwise — are prohibited without prior written authorization from the copyright holder.
 
-### 3.5 AI and Automated Systems
+### 4.5 AI and Automated Systems
 The Software, its content, structure, or any portion thereof may not be used as training data, fine-tuning data, evaluation data, or input for any artificial intelligence, machine learning, or automated system of any kind.
 
 ---
 
-## 4. PERMITTED VIEWING
+## 5. PERMITTED VIEWING
 
 Viewing the publicly accessible portions of the Projects (e.g., a deployed GitHub Pages site or a public GitHub repository) for personal reference does not constitute a grant of any rights beyond the act of viewing itself. Viewing is not permission to copy, use, reproduce, or derive.
 
 ---
 
-## 5. NO IMPLICIT LICENSE
+## 6. NO IMPLICIT LICENSE
 
 No license is granted by implication, estoppel, conduct, course of dealing, or otherwise. The absence of a technical restriction (such as a password or paywall) does not constitute permission to use the Software in any manner not explicitly authorized herein.
 
 ---
 
-## 6. CONTRIBUTIONS
+## 7. CONTRIBUTIONS
 
 Any contributions, suggestions, pull requests, or submissions made to the Projects by any third party shall be considered the exclusive property of the copyright holder upon submission. By contributing, the contributor irrevocably assigns all rights, title, and interest in such contribution to the copyright holder, with no compensation owed.
 
 ---
 
-## 7. DISCLAIMER OF WARRANTIES
+## 8. DISCLAIMER OF WARRANTIES
 
 THE SOFTWARE IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, OR NON-INFRINGEMENT. THE COPYRIGHT HOLDER MAKES NO REPRESENTATIONS OR WARRANTIES REGARDING THE ACCURACY, COMPLETENESS, OR RELIABILITY OF THE SOFTWARE.
 
 ---
 
-## 8. LIMITATION OF LIABILITY
+## 9. LIMITATION OF LIABILITY
 
 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE COPYRIGHT HOLDER BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES ARISING FROM OR RELATED TO THE SOFTWARE OR THIS LICENSE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
 
 ---
 
-## 9. TERMINATION
+## 10. TERMINATION
 
 Any unauthorized use of the Software automatically and immediately terminates any implied or purported rights of the infringing party. The copyright holder reserves the right to pursue all available legal remedies, including injunctive relief and monetary damages, to the fullest extent permitted by applicable law.
 
 ---
 
-## 10. GOVERNING LAW
+## 11. GOVERNING LAW
 
 This license shall be governed by and construed in accordance with the laws of **Romania**, without regard to its conflict of law provisions, and in compliance with applicable European Union intellectual property law, including Directive 2009/24/EC on the legal protection of computer programs and Directive 2001/29/EC on copyright in the information society.
 
@@ -102,13 +117,13 @@ Any dispute arising under this license shall be subject to the exclusive jurisdi
 
 ---
 
-## 11. SEVERABILITY
+## 12. SEVERABILITY
 
 If any provision of this license is found to be unenforceable or invalid under applicable law, that provision shall be modified to the minimum extent necessary to make it enforceable, and the remaining provisions shall continue in full force and effect.
 
 ---
 
-## 12. CONTACT
+## 13. CONTACT
 
 To request written authorization for any use of the Software not covered by this license, contact **Daniel-Cristian Brindusa** directly through the repository or project channels associated with the Projects.
 

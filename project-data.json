@@ -1,0 +1,31 @@
+{
+  "projectName": "WardrobeApp",
+  "exportedAt": "2026-03-27T22:00:00Z",
+  "source": "Android Project Export",
+  "rootPath": "WardrobeApp",
+  "entries": [
+    { "path": "app", "type": "folder", "description": "Android application module" },
+    { "path": "app/src", "type": "folder" },
+    { "path": "app/src/main", "type": "folder" },
+    { "path": "app/src/main/AndroidManifest.xml", "type": "file", "description": "App manifest" },
+    { "path": "app/src/main/java", "type": "folder" },
+    { "path": "app/src/main/java/com", "type": "folder" },
+    { "path": "app/src/main/java/com/example", "type": "folder" },
+    { "path": "app/src/main/java/com/example/wardrobeapp", "type": "folder", "description": "Main package" },
+    { "path": "app/src/main/java/com/example/wardrobeapp/MainActivity.kt", "type": "file", "description": "Entry activity" },
+    { "path": "app/src/main/java/com/example/wardrobeapp/WardrobeApp.kt", "type": "file", "description": "Navigation host" },
+    { "path": "app/src/main/java/com/example/wardrobeapp/navigation", "type": "folder" },
+    { "path": "app/src/main/java/com/example/wardrobeapp/navigation/AppRoute.kt", "type": "file" },
+    { "path": "app/src/main/java/com/example/wardrobeapp/ui", "type": "folder" },
+    { "path": "app/src/main/java/com/example/wardrobeapp/ui/components", "type": "folder" },
+    { "path": "app/src/main/java/com/example/wardrobeapp/ui/components/Cards.kt", "type": "file" },
+    { "path": "app/src/main/java/com/example/wardrobeapp/ui/screens", "type": "folder" },
+    { "path": "app/src/main/java/com/example/wardrobeapp/ui/screens/WardrobeScreen.kt", "type": "file" },
+    { "path": "app/src/main/java/com/example/wardrobeapp/ui/utils", "type": "folder" },
+    { "path": "app/src/main/java/com/example/wardrobeapp/ui/utils/AppConstants.kt", "type": "file" },
+    { "path": "gradle", "type": "folder" },
+    { "path": "gradle/libs.versions.toml", "type": "file", "description": "Version catalog" },
+    { "path": "build.gradle.kts", "type": "file" },
+    { "path": "settings.gradle.kts", "type": "file" }
+  ]
+}

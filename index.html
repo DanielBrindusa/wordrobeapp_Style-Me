@@ -3,34 +3,116 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wardrobe App Project Structure</title>
+  <title>Wardrobe App Project Map Generator</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="page">
     <header class="hero">
-      <div class="hero-badge">Android Studio Project Map</div>
+      <div class="hero-badge">Android Studio Project Map Generator</div>
       <h1>Wardrobe App Structure Guide</h1>
       <p class="hero-text">
-        A clean visual map for your <strong>Style me / Wardrobe App</strong> project.
-        Upload these files to GitHub and use this page as a reference while splitting,
-        editing, and maintaining your Android project.
+        Turn this page into a real maintainability tool. It now uses a real JSON file automatically
+        when one is present in the project folder, and it still supports manual JSON import.
       </p>
 
       <div class="hero-actions">
-        <button id="expandAllBtn" class="primary-btn">Expand all</button>
-        <button id="collapseAllBtn" class="secondary-btn">Collapse all</button>
+        <button id="expandAllBtn" class="primary-btn" type="button">Expand all</button>
+        <button id="collapseAllBtn" class="secondary-btn" type="button">Collapse all</button>
+        <button id="useDefaultBtn" class="secondary-btn" type="button">Use default map</button>
       </div>
     </header>
 
     <main class="content">
-      <section class="card">
+      <section class="card import-card">
         <div class="section-head">
-          <h2>Recommended package structure</h2>
-          <p>Use this as the folder structure to keep the app maintainable.</p>
+          <h2>Import real project data</h2>
+          <p>
+            The page first tries to auto-load a JSON file from the project folder.
+            You can also upload another JSON export manually at any time.
+          </p>
+        </div>
+
+        <div class="import-layout">
+          <div>
+            <label id="dropZone" class="drop-zone" for="jsonFileInput" tabindex="0">
+              <input id="jsonFileInput" class="file-input" type="file" accept=".json,application/json" />
+              <span class="drop-zone-badge">JSON</span>
+              <strong>Drop your export here or click to browse</strong>
+              <span>Auto-detects common project JSON file names and also accepts manual uploads.</span>
+            </label>
+
+            <div class="import-actions">
+              <button id="downloadSampleBtn" class="secondary-btn" type="button">Download sample JSON</button>
+              <button id="clearImportedBtn" class="ghost-btn" type="button">Clear imported data</button>
+            </div>
+
+            <p id="importStatus" class="import-status" aria-live="polite">Loading project data...</p>
+          </div>
+
+          <aside class="import-info-panel">
+            <h3>Accepted JSON shapes</h3>
+            <ul class="accepted-formats">
+              <li><code>[{ "type": "folder", ... }]</code></li>
+              <li><code>{ "tree": [...] }</code></li>
+              <li><code>{ "project": { "tree": [...] } }</code></li>
+              <li><code>{ "entries": [{ "path": "app/src/..." }] }</code></li>
+            </ul>
+            <p class="muted-note">
+              Auto-load checks these filenames first: <code>project-data.json</code>, <code>project-map.json</code>,
+              <code>project-structure.json</code>, and <code>sample-project-structure.json</code>.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="stats-grid" aria-label="Project summary">
+        <article class="stat-card">
+          <span class="stat-label">Source</span>
+          <strong id="sourceValue" class="stat-value">Built-in reference</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Folders</span>
+          <strong id="foldersValue" class="stat-value">0</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Files</span>
+          <strong id="filesValue" class="stat-value">0</strong>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Deepest level</span>
+          <strong id="depthValue" class="stat-value">0</strong>
+        </article>
+      </section>
+
+      <section class="card">
+        <div class="section-head section-head-split">
+          <div>
+            <h2 id="treeTitle">Project structure</h2>
+            <p id="treeDescription">Search the imported tree and inspect the actual structure of the project.</p>
+          </div>
+          <div id="metadataPills" class="metadata-pills"></div>
+        </div>
+
+        <div class="tree-tools">
+          <div class="search-box">
+            <label class="search-label" for="treeSearchInput">Search files and folders</label>
+            <div class="search-input-wrap">
+              <input
+                id="treeSearchInput"
+                class="search-input"
+                type="text"
+                placeholder="Search for MainActivity, compose, stats, utils..."
+                autocomplete="off"
+              />
+              <button id="clearSearchBtn" class="clear-search-btn" type="button" aria-label="Clear search">✕</button>
+            </div>
+          </div>
+          <p id="searchSummary" class="search-summary">Showing full structure.</p>
         </div>
 
         <div class="tree" id="projectTree"></div>
+        <p id="emptySearchState" class="empty-search-state" hidden>No matching files or folders found.</p>
       </section>
 
       <section class="grid">
@@ -145,35 +227,11 @@
       </section>
 
       <section class="card footer-card">
-        <h2>Current target structure</h2>
-        <pre class="structure-preview">com.example.wardrobeapp
-│
-├── MainActivity.kt
-├── WardrobeApp.kt
-│
-├── navigation
-│   └── AppRoute.kt
-│
-├── ui
-│   ├── components
-│   │   ├── Cards.kt
-│   │   ├── ColorPickers.kt
-│   │   ├── CommonComponents.kt
-│   │   └── Dialogs.kt
-│   │
-│   ├── screens
-│   │   ├── AddItemScreen.kt
-│   │   ├── CreateOutfitScreen.kt
-│   │   ├── ItemDetailsScreen.kt
-│   │   ├── SettingsScreen.kt
-│   │   ├── StatsScreen.kt - 'Insights' tab
-│   │   ├── ToWearScreen.kt - 'Outfits' tab
-│   │   ├── WardrobeScreen.kt
-│   │   └── WelcomeScreen.kt
-│   │
-│   └── utils
-│       ├── AppConstants.kt
-│       └── WelcomePreferences.kt</pre>
+        <div class="section-head">
+          <h2>Structure preview</h2>
+          <p>Plain-text version of the currently loaded project map.</p>
+        </div>
+        <pre id="structurePreview" class="structure-preview"></pre>
       </section>
     </main>
   </div>

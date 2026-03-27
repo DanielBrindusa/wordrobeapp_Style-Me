@@ -114,4 +114,12 @@ This reference site was created alongside the development of **Style Me**, a per
 
 ---
 
-*Maintained by the Style Me project author.*
+## ⚖️ License
+
+This project is proprietary. See [LICENSE](./LICENSE.md) for details.
+
+© 2025–present **Daniel-Cristian Brindusa**. All Rights Reserved.
+
+---
+
+*Maintained by [Daniel-Cristian Brindusa](https://github.com/daniel-cristian-brindusa).*

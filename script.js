@@ -52,8 +52,8 @@ const defaultProjectData = [
               { type: "file", name: "CreateOutfitScreen.kt", description: "Outfit planning screen" },
               { type: "file", name: "ItemDetailsScreen.kt", description: "Details page for one clothing item" },
               { type: "file", name: "SettingsScreen.kt", description: "Theme, notifications, and app info" },
-              { type: "file", name: "StatsScreen.kt", description: "Wardrobe insights and usage statistics. 'Insights' tab currently" },
-              { type: "file", name: "ToWearScreen.kt", description: "Planned outfits list. 'Outfits' tab currently" },
+              { type: "file", name: "StatsScreen.kt", description: "Wardrobe insights and usage statistics. 'Insights' tab currently. Currently 'Insights' tab" },
+              { type: "file", name: "ToWearScreen.kt", description: "Planned outfits list. 'Outfits' tab currently. Currently 'Outfits' tab" },
               { type: "file", name: "WardrobeScreen.kt", description: "Main wardrobe grid and filters" },
               { type: "file", name: "WelcomeScreen.kt", description: "First-time welcome screen" }
             ]
@@ -64,6 +64,7 @@ const defaultProjectData = [
             description: "Constants and helper functions",
             children: [
               { type: "file", name: "AppConstants.kt", description: "Categories, seasons, occasions, colors, helpers" },
+              { type: "file", name: "BackgroundRemover.kt", description: "Remove background with AI deeplab_metadata.tflite" },
               { type: "file", name: "WelcomePreferences.kt", description: "SharedPreferences helper for welcome screen state" }
             ]
           }
